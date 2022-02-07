@@ -18,7 +18,6 @@ python -m venv venv_name
 clone this repository to a local repository 
 ```bash
 cd whatever/folder
-git init
 git clone <repo-url>
 ```
 
