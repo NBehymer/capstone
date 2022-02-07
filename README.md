@@ -46,3 +46,26 @@ python main.py
 ## Viewing The App
 
 Go to `http://127.0.0.1:5000`
+
+## Data Structure
+
+folder holding github project
+|- virtual environment 
+  | - python interpreter stuff
+|- main.py 
+|- requirements.txt
+|- README.md
+|- website folder
+   |
+   | - __init__.py (Makes website/flask folder is a package. This file is what main.py uses to create our flask app. Very important folder)
+   | - __pycache__ folder  
+      |- nothing that needs to be touched
+   | - auth.py (views having to do with security)
+   | - database.db (database where user information is stored for now, its sqlite created in __init__.py) 
+   | - models.py (using sqlalchemy to create tables in database by simply writting python classes)
+   | - static folder (can eventually hold js files to deal with cookies along with anything static like an img folder)
+      | - index.js (empty js file)
+   | - templates folder
+      | - base.html (has all headers, footers, and everything else every html file will have in common)
+      | - all other html files (uses special sections made by jinja in base.html to add content to whatever page)
+   | - views.py (just like auth.py but not security related we can create as many blueprint py files we want)
