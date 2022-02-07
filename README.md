@@ -33,7 +33,7 @@ install requirements: (you can include path before requirements.txt (path/to/req
 pip3 install -r requirements.txt
 ```
 
-## note:
+## note
 
 anything over python 3.6 and under 3.10 should work (I think im using 3.8.5). Make sure you have it set as project interrupter! If you run these commands inside of vscode terminal after cloning from this repository a message should pop up asking if youd like to use the virtual environment created.
 
