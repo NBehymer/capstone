@@ -2,45 +2,45 @@
 
 ## Setup & Installtion
 
-Create Python virtual environment, anything over 3.6 and under 3.10 should work. Make sure you have it set as project interrupter.
-```bash
-macOS/Linux
-You may need to run sudo apt-get install python3-venv first
-
-python3 -m venv venv_name
-```
-```bash
-Windows
-You can also use py -3 -m venv .venv
-python -m venv venv_name
-```
-
 clone this repository to a local repository 
 ```bash
 cd whatever/folder
-git clone <repo-url>
+git clone <repo-url> in this case, https://github.com/amgosek/capstone
 ```
 
-enable virtual environment 
+Create Python virtual environment
 ```bash
-On Unix or MacOS, run:
-source venv_name/bin/activate
+macOS
+virtualenv -p python3 <desired-path> 
+
+I put mine inside of the folder that holds this github repository so there was no path in my case the command looked like this,
+virtualenv -p python3 server
 ```
 
+enable virtual environment:
 ```bash
-On Windows, run:
-venv_name\Scripts\activate.bat
+macOS
+source <desired-path>/bin/activate
+
+in my case,
+source server/bin/activate
+```
+
+NOTE:
+```bash
+anything over python 3.6 and under 3.10 should work (I think im using 3.8.5). Make sure you have it set as project interrupter! If you run these commands inside of vscode terminal after cloning from this repository a message should pop up asking if youd like to use the virtual environment created.
 ```
 
 install requirements
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Running The App
 
 ```bash
 python main.py
+(Might have to run twice to work)
 ```
 
 ## Viewing The App
