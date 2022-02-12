@@ -10,8 +10,6 @@ import stripe
 views = Blueprint('views', __name__)
 stripe.api_key = 'sk_test_51KOEoTEAaICJ0GdRPRiVmPSZIQQ9DVtzWqeNtuevHa01p74QcR5wCNOrPdisWya0OheTal3B6kIy7Tuk987Cuk3l00n89yrf6y'
 
-# count of the items inside cart
-items_in_cart = 0;
 
 @views.route('/', methods=['GET', 'POST'])
 def home():
@@ -21,11 +19,6 @@ def home():
 @views.route('/menu', methods=['GET', 'POST'])
 def menu():
     return render_template('menu.html', user=current_user)
-
-
-@views.route('/thanks', methods = ['GET'])
-def thanks():
-    return render_template('base.html', user=current_user)
 
 
 @views.route('/create-checkout-session', methods=['POST'])
