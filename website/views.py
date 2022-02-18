@@ -1,6 +1,6 @@
 # create standard routes
 
-from crypt import methods
+# from crypt import methods
 from distutils.command.config import config
 from flask import Blueprint, render_template, flash, session, url_for, redirect
 from flask_login import login_required, current_user
@@ -16,10 +16,17 @@ def home():
     return render_template("home.html", user=current_user)
 
 
+
 @views.route('/menu', methods=['GET', 'POST'])
 def menu():
-    return render_template('menu.html', user=current_user)
+    return render_template('menu.html', user=current_user, items=get_items())
 
+@views.route('/item/<int:id>', methods=['GET', 'POST'])
+def item(id):
+    if id > len(get_items()):
+        pass
+    else:
+        return render_template('item.html', user=current_user, current_item=get_items()[id])
 
 @views.route('/create-checkout-session', methods=['POST'])
 def create_checkout_session():
@@ -47,6 +54,13 @@ def create_checkout_session():
 def successful():
     return render_template('successful.html', user=current_user)
 
+def get_items():
+    test_items = [
+        {'id': 0, 'name': 'Pepperoni', 'price': 9.99, 'desc': 'A pizza topped with Pepperoni', 'toppings': ['Pepperoni']},
+        {'id': 1, 'name': 'Veggie', 'price': 10.99, 'desc': 'A pizza topped with Peppers, black olives, onions, etc.', 'toppings': ['Peppers', 'Olives', 'Onions']},
+        {'id': 2, 'name': "Meat Lover's", 'price': 10.99, 'desc': 'A pizza topped with Pepperoni, bacon, etc.', 'toppings': ['Pepperoni', 'Bacon']}
+    ]
+    return test_items
 
 # @views.route('/create-payment-intent', methods=['POST', 'GET'])
 # def create_payment():

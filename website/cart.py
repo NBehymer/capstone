@@ -1,5 +1,5 @@
-from crypt import methods
-from crypt import methods
+# from crypt import methods
+# from crypt import methods
 from distutils.command.config import config
 from flask import Blueprint, render_template, flash, session, url_for, redirect
 from flask_login import login_required, current_user
