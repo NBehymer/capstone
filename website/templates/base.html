@@ -14,10 +14,21 @@
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="../static/addToCart.css">
+  <script type="text/javascript" src="../static/addToCart.js"></script>
 
     <title>{% block title %}Home{% endblock %}</title>
   </head>
   <body>
+
+    <div class="cart" id="cartRight" style="display: none;">
+      <div id ="titl" class="title">CART(0)</div>
+      <div id="title"></div>
+      <div id="content"></div>
+      <div class="checkoutButton">
+          <button onclick="checkoutPage()">Checkout</button>
+      </div>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <button
         class="navbar-toggler"
@@ -81,6 +92,9 @@
       type="text/javascript"
       src="{{ url_for('static', filename='index.js') }}"
     ></script>
+
+    
+    
   </body>
   <footer class="footer">
     <div class="container">

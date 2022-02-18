@@ -1,0 +1,21 @@
+.cart{
+    width:250px;
+    float:right;
+    text-align:center;
+    border:1px solid black;
+    overflow-y:scroll;
+    height:800px;
+    
+}
+
+#checkoutButton:last-child{
+    margin-right:0px;
+    position:absolute; 
+    overflow:auto;
+    
+    bottom: 0;
+    
+    /* margin-left: -104.5px; */
+   
+
+}
