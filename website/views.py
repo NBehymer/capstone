@@ -56,9 +56,9 @@ def successful():
 
 def get_items():
     test_items = [
-        {'id': 0, 'name': 'Pepperoni', 'price': 9.99, 'desc': 'A pizza topped with Pepperoni', 'toppings': ['Pepperoni']},
-        {'id': 1, 'name': 'Veggie', 'price': 10.99, 'desc': 'A pizza topped with Peppers, black olives, onions, etc.', 'toppings': ['Peppers', 'Olives', 'Onions']},
-        {'id': 2, 'name': "Meat Lover's", 'price': 10.99, 'desc': 'A pizza topped with Pepperoni, bacon, etc.', 'toppings': ['Pepperoni', 'Bacon']}
+        {'id': 0, 'name': 'Pepperoni', 'price': 9.99, 'desc': 'A pizza topped with Pepperoni', 'toppings': ['Pepperoni'], 'cal': 300},
+        {'id': 1, 'name': 'Veggie', 'price': 10.99, 'desc': 'A pizza topped with Peppers, black olives, onions, etc.', 'toppings': ['Peppers', 'Olives', 'Onions'], 'cal': 330},
+        {'id': 2, 'name': "Meat Lover's", 'price': 10.99, 'desc': 'A pizza topped with Pepperoni, bacon, etc.', 'toppings': ['Pepperoni', 'Bacon'], 'cal': 480}
     ]
     return test_items
 

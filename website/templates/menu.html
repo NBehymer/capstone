@@ -2,10 +2,12 @@
 
 {% block content%}
 
+  <script type="text/javascript" src="../static/addToCart.js"></script>
+    <link rel="stylesheet" href="../static/addToCart.css">
 <div class="album py-5 bg-light">
+  
     <h1 align="center">Menu</h1>
     <div class="container">
-
       <div class="row">
         {% for item in items %}
         <div class="col-md-4">
@@ -16,7 +18,6 @@
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="{{ url_for ('views.item', id=item.id) }}"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
                 <small class="text-muted">${{ item.price }}</small>
               </div>

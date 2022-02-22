@@ -12,7 +12,10 @@
           <label for="id_{{topping}}">{{ topping }}</label><br>
           {% endfor %}
         </p>
-        <a href="{{ url_for ('cart.cart')}}"><button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart: +${{current_item.price}}</button></a>
+        <div class="addCart", style="text-align:center">
+          <button onClick="addToCart(price9)">Add To Cart</button>
+        </div>
+        <small class="text-muted">{{ current_item.cal }} calories per slice, etc, etc</small>
   </div>
 
 
